@@ -1,0 +1,14 @@
+.projectOverlay {
+    position: absolute;
+    top: 50%;
+    left: 25%;
+}
+
+.projectName {
+    display: inline;
+}
+
+.githubLogoProject {
+    max-width: 10%;
+    height: auto;   
+}
