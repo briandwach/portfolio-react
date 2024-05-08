@@ -95,26 +95,32 @@ function Contact() {
       <h1>Contact</h1>
       <p>brian.d.wach@gmail.com</p>
       <form className="form" onSubmit={handleFormSubmit}>
-        <label>Name:</label>
+        <label for="nameInput">Name:</label>
         <input
           value={name}
           name="name"
+          id="nameInput"
+          autocomplete="name"
           onChange={handleInputChange}
           onBlur={handleInputBlur}
           type="text"
         />
-        <label>Email Address:</label>
+        <label for="emailInput">Email Address:</label>
         <input
           value={email}
           name="email"
+          id="emailInput"
+          autocomplete="email"
           onChange={handleInputChange}
           onBlur={handleInputBlur}
           type="email"
         />
-        <label>Message:</label>
+        <label for="messageInput">Message:</label>
         <input
           value={message}
           name="message"
+          id="messageInput"
+          autocomplete="off"
           onChange={handleInputChange}
           onBlur={handleInputBlur}
           type="text"
