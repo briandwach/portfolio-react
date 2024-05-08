@@ -9,7 +9,7 @@ function Project({ name, appUrl, githubUrl, image, alt }) {
             <div className="projectOverlay">
                 <h2 className="projectName">{name}</h2>
                 <a href={githubUrl} target="_blank" rel="noopener noreferrer">
-                    <img className="githubLogoProject align-bottom" src='src/images/github-mark.png' alt='Github Invertocat logo' />
+                    <img className="githubLogoProject align-bottom" src='/images/github-mark.png' alt='Github Invertocat logo' />
                 </a>
             </div>
         </div>
