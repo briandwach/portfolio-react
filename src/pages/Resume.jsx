@@ -24,6 +24,7 @@ export default function Resume() {
         <li>Express</li>
         <li>PostgreSQL, Sequelize</li>
         <li>MongoDB, Mongoose</li>
+        <li>REST</li>
         <li>graphQL</li>
       </ul>
       </div>
