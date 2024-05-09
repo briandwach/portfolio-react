@@ -1,10 +1,14 @@
+import { Link } from 'react-router-dom';
+
 import Navigation from '../Navigation/Navigation.jsx';
 import './Header.css';
 
 function Header() {
     return (
         <div>
-            <h1>Brian Wach</h1>
+            <Link to="/">
+            Brian Wach
+             </Link>
             <Navigation />
         </div>
     );

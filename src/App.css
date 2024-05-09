@@ -3,3 +3,8 @@
 #root {
   
 }
+
+.profilePicture {
+    max-width: 25%;
+    border-radius: 30px;
+}
