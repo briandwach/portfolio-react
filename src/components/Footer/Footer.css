@@ -1,0 +1,10 @@
+.footerContainer {
+    margin-top: 5px;
+    display: flex;
+    justify-content: center;
+}
+
+.logoFooter {
+    max-width: 50px;
+    margin: 10px;
+}
