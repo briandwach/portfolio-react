@@ -36,7 +36,7 @@ function Contact() {
     if (inputType === 'name' && !name) {
       setErrorMessage('Name is required.');
     } else if (inputType === 'email' && !validateEmail(email)) {
-      setErrorMessage('Email is invalid');
+      setErrorMessage('Email is invalid.');
     } else if (inputType === 'message' && !message) {
       setErrorMessage('Message is required.');
     } else { setErrorMessage(''); }
@@ -91,12 +91,13 @@ function Contact() {
   };
 
   return (
-    <div className="container text-center">
+    <div className="">
       <h1>Contact</h1>
-      <p>brian.d.wach@gmail.com</p>
+      <a href="mailto:brian.d.wach@gmail.com">brian.d.wach@gmail.com</a>
       <form className="form" onSubmit={handleFormSubmit}>
-        <label htmlFor="nameInput">Name:</label>
+        <label htmlFor="nameInput" className="d-block">Name:</label>
         <input
+          className="d-block"
           value={name}
           name="name"
           id="nameInput"
@@ -105,8 +106,9 @@ function Contact() {
           onBlur={handleInputBlur}
           type="text"
         />
-        <label htmlFor="emailInput">Email Address:</label>
+        <label htmlFor="emailInput" className="d-block">Email Address:</label>
         <input
+          className="d-block"
           value={email}
           name="email"
           id="emailInput"
@@ -115,7 +117,7 @@ function Contact() {
           onBlur={handleInputBlur}
           type="email"
         />
-        <label htmlFor="messageInput">Message:</label>
+        <label htmlFor="messageInput" className="d-block">Message:</label>
         <input
           value={message}
           name="message"
@@ -124,14 +126,13 @@ function Contact() {
           onChange={handleInputChange}
           onBlur={handleInputBlur}
           type="text"
-        />
-        <button type="submit">Submit</button>
-      </form>
+        />  
       {errorMessage && (
         <div>
           <p className="error-text">{errorMessage}</p>
-        </div>
-      )}
+        </div>)}
+        <button type="submit" className="d-block">Submit</button>
+        </form>
     </div>
   );
 }

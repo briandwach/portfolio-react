@@ -6,9 +6,11 @@ import './Header.css';
 function Header() {
     return (
         <div>
-            <Link to="/">
+            <div className="m-3">
+            <Link className="h1 headerName" to="/">
             Brian Wach
              </Link>
+             </div>
             <Navigation />
         </div>
     );

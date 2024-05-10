@@ -1,10 +1,16 @@
 /* Styles for App.jsx */
 
-#root {
-  
+h1, p {
+    color: #24292f;
+    margin: 10px;
 }
 
+
+
 .profilePicture {
-    max-width: 25%;
+    width: 25%;
+    max-width: 300px;
     border-radius: 30px;
+    margin: 10px;
 }
+
