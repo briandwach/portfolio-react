@@ -91,13 +91,14 @@ function Contact() {
   };
 
   return (
-    <div className="">
+    <div>
       <h1>Contact</h1>
-      <a href="mailto:brian.d.wach@gmail.com">brian.d.wach@gmail.com</a>
+      <div className="contactForm">
+      <a className="emailLink" href="mailto:brian.d.wach@gmail.com">brian.d.wach@gmail.com</a>
       <form className="form" onSubmit={handleFormSubmit}>
         <label htmlFor="nameInput" className="d-block">Name:</label>
         <input
-          className="d-block"
+          className="d-block mb-3"
           value={name}
           name="name"
           id="nameInput"
@@ -108,7 +109,7 @@ function Contact() {
         />
         <label htmlFor="emailInput" className="d-block">Email Address:</label>
         <input
-          className="d-block"
+          className="d-block mb-3"
           value={email}
           name="email"
           id="emailInput"
@@ -118,7 +119,8 @@ function Contact() {
           type="email"
         />
         <label htmlFor="messageInput" className="d-block">Message:</label>
-        <input
+        <textarea
+          className="mb-3 messageInput"
           value={message}
           name="message"
           id="messageInput"
@@ -127,12 +129,13 @@ function Contact() {
           onBlur={handleInputBlur}
           type="text"
         />  
-      {errorMessage && (
-        <div>
+        <button type="submit" className="d-block mb-3">Submit</button>
+        </form>
+        {errorMessage && (
+        <div className="mb-3">
           <p className="error-text">{errorMessage}</p>
         </div>)}
-        <button type="submit" className="d-block">Submit</button>
-        </form>
+        </div>
     </div>
   );
 }

@@ -1,11 +1,11 @@
 import projectData from '../data/projectData.js';
-import Project from '../components/Project/Project.jsx';
+import Project from '../components/Project.jsx';
 
 export default function Portfolio() {
   return (
       <div>
           <h1>Portfolio</h1>
-          <div>
+          <div className="projectGrid">
               {projectData.map((project) => (
                   <Project
                       key={project.name}
