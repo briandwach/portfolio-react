@@ -36,7 +36,7 @@ function Contact() {
     if (inputType === 'name' && !name) {
       setErrorMessage('Name is required.');
     } else if (inputType === 'email' && !validateEmail(email)) {
-      setErrorMessage('Email is invalid');
+      setErrorMessage('Email is invalid.');
     } else if (inputType === 'message' && !message) {
       setErrorMessage('Message is required.');
     } else { setErrorMessage(''); }
@@ -91,12 +91,14 @@ function Contact() {
   };
 
   return (
-    <div className="container text-center">
+    <div>
       <h1>Contact</h1>
-      <p>brian.d.wach@gmail.com</p>
+      <div className="contactForm">
+      <a className="emailLink" href="mailto:brian.d.wach@gmail.com">brian.d.wach@gmail.com</a>
       <form className="form" onSubmit={handleFormSubmit}>
-        <label htmlFor="nameInput">Name:</label>
+        <label htmlFor="nameInput" className="d-block">Name:</label>
         <input
+          className="d-block mb-3"
           value={name}
           name="name"
           id="nameInput"
@@ -105,8 +107,9 @@ function Contact() {
           onBlur={handleInputBlur}
           type="text"
         />
-        <label htmlFor="emailInput">Email Address:</label>
+        <label htmlFor="emailInput" className="d-block">Email Address:</label>
         <input
+          className="d-block mb-3"
           value={email}
           name="email"
           id="emailInput"
@@ -115,8 +118,9 @@ function Contact() {
           onBlur={handleInputBlur}
           type="email"
         />
-        <label htmlFor="messageInput">Message:</label>
-        <input
+        <label htmlFor="messageInput" className="d-block">Message:</label>
+        <textarea
+          className="mb-3 messageInput"
           value={message}
           name="message"
           id="messageInput"
@@ -124,14 +128,14 @@ function Contact() {
           onChange={handleInputChange}
           onBlur={handleInputBlur}
           type="text"
-        />
-        <button type="submit">Submit</button>
-      </form>
-      {errorMessage && (
-        <div>
+        />  
+        <button type="submit" className="d-block mb-3">Submit</button>
+        </form>
+        {errorMessage && (
+        <div className="mb-3">
           <p className="error-text">{errorMessage}</p>
+        </div>)}
         </div>
-      )}
     </div>
   );
 }
