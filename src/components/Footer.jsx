@@ -6,9 +6,6 @@ function Footer() {
         <a href="https://www.linkedin.com/in/brianwach/" target="_blank" rel="noopener noreferrer">
             <img className="logoFooter logo" src='/images/In-Blue-128.png' alt='LinkedIn blue In logo' />
         </a>
-        <a href="https://soundcloud.com/afda-glo" target="_blank" rel="noopener noreferrer">
-            <img className="logoFooter logo" src='/images/SoundCloudLogo.jpg' alt='LinkedIn blue In logo' />
-        </a>
     </div>
     );
 }
