@@ -3,7 +3,7 @@ export default function About() {
     <div>
       <h1>About Me</h1>
       <div className="aboutContent">
-        <img className="profilePicture" src='/images/headshot.jpg' alt='Headshot of Brian Wach' />
+        <img className="profilePicture" src='/images/headshot.png' alt='Headshot of Brian Wach' />
         <p>
           Brian Wach is an audio-visual technician, musician, and composer in the Chicagoland area.
           He completed his master’s degree in Recording Arts and earned a bachelor’s in Percussion Performance, both at Northern Illinois University (NIU).

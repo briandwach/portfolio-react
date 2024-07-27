@@ -131,10 +131,6 @@ function Contact() {
         />  
         <button type="submit" className="d-block mb-3">Submit</button>
         </form>
-        {errorMessage && (
-        <div className="mb-3">
-          <p className="error-text">{errorMessage}</p>
-        </div>)}
         </div>
     </div>
   );
