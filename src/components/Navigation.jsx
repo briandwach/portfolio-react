@@ -10,9 +10,9 @@ function Navigation() {
         'Resume'
     ];
 
-    const btnStyle = 'btn mr-1 ';
-    const normNavStyle = 'hover:btn-accent active:btn-success'
-    const currentNavStyle = 'btn-success';
+    const btnStyle = 'btn mr-1';
+    const normNavStyle = 'active:btn-success desktop:hover:btn-accent '
+    const currentNavStyle = 'btn-success hover:btn-success hover:btn-secondary';
     
     return (
         <div className="navbar">

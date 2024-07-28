@@ -6,7 +6,7 @@ export default {
   ],
   theme: {
     screens: {
-      'mobile': '780px'
+      'desktop': '780px'
     },
     extend: {
     },
@@ -22,7 +22,7 @@ export default {
           'primary': '#d7dce0',
           'base-content': '#24292f',
           'neutral': '#212529',
-          'secondary': '#212529',
+          'secondary': '#86abcf',
           'accent': '#0a66c2',
           'success': '#9bc5ee'
         },
