@@ -7,6 +7,7 @@ export default function About() {
         <p>
           Full stack web developer with a background in music and audio visual technologies.
         </p>
+        <br></br>
         <p>
           Focused on creating intuitive web applications and products to serve the needs of businesses and people.
         </p>
