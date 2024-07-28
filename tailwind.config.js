@@ -8,13 +8,25 @@ export default {
     screens: {
       'mobile': '780px'
     },
-    colors: {
-      primary: '#d7dce0',
-      secondary: '#24292f',
-      third: '#212529'
-    },
     extend: {
     },
   },
-  plugins: [],
+  plugins: [
+    require('daisyui')
+  ],
+  daisyui: {
+    themes: [
+      {
+        mytheme: {
+          'base-100': '#d7dce0',
+          'primary': '#d7dce0',
+          'base-content': '#24292f',
+          'neutral': '#212529',
+          'secondary': '#212529',
+          'accent': '#0a66c2',
+          'success': '#9bc5ee'
+        },
+      },
+    ],
+  }
 }

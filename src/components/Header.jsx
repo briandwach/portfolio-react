@@ -4,9 +4,9 @@ import Navigation from './Navigation.jsx';
 
 function Header() {
     return (
-        <div className="headerBackground">
+        <div className="bg-">
             <div className='m-2'>
-            <Link className='text-5xl text-secondary' to='/'>
+            <Link className='text-5xl text-base-content hover:text-accent active:text-success' to='/'>
             Brian Wach
              </Link>
              </div>
