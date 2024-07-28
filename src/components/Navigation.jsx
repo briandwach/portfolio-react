@@ -11,8 +11,8 @@ function Navigation() {
     ];
 
     const btnStyle = 'btn mr-1';
-    const normNavStyle = 'active:btn-success desktop:hover:btn-accent '
-    const currentNavStyle = 'btn-success hover:btn-success hover:btn-secondary';
+    const normNavStyle = 'btn-primary'
+    const currentNavStyle = 'btn-success';
     
     return (
         <div className="navbar">

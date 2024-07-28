@@ -6,7 +6,7 @@ function Header() {
     return (
         <div className="bg-">
             <div className='m-2'>
-            <Link className='text-5xl text-base-content desktop:hover:text-accent desactive:text-success' to='/'>
+            <Link className='text-5xl text-base-content desktop:hover:text-accent desktop:active:text-success' to='/'>
             Brian Wach
              </Link>
              </div>

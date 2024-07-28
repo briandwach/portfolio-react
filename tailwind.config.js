@@ -19,8 +19,8 @@ export default {
       {
         mytheme: {
           'base-100': '#d7dce0',
-          'primary': '#d7dce0',
           'base-content': '#24292f',
+          'primary': 'c3c8cb',
           'neutral': '#212529',
           'secondary': '#86abcf',
           'accent': '#0a66c2',
