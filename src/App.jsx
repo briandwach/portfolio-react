@@ -5,10 +5,11 @@ import Header from './components/Header.jsx';
 import Footer from './components/Footer.jsx';
 import './index.css'
 
+
 function App() {
 
   return (
-    <div className="primaryBackground font-jakarta">
+    <div className="font-jakarta">
       <Header />
       <main> 
         <Outlet />
