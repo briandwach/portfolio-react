@@ -1,18 +1,16 @@
 import { useState } from 'react';
 
-// Here we import a helper function that will check if the email is valid
 import { validateEmail } from '../utils/helpers';
 
 function Contact() {
-  // Create state variables for the fields in the form
-  // We are also setting their initial values to an empty string
+
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
 
   const handleInputChange = (e) => {
-    // Getting the value and name of the input which triggered the change
+    
     const { target } = e;
     const inputType = target.name;
     const inputValue = target.value;
@@ -159,6 +157,10 @@ function Contact() {
           </label>
           <button type="submit" className="btn mb-3 w-fit">Submit</button>
         </form>
+        {errorMessage && (
+        <div className="mb-3">
+          <p className="error-text">{errorMessage}</p>
+        </div>)}
       </div>
     </div>
   );
