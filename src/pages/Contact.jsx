@@ -1,18 +1,16 @@
 import { useState } from 'react';
 
-// Here we import a helper function that will check if the email is valid
 import { validateEmail } from '../utils/helpers';
 
 function Contact() {
-  // Create state variables for the fields in the form
-  // We are also setting their initial values to an empty string
+
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
 
   const handleInputChange = (e) => {
-    // Getting the value and name of the input which triggered the change
+    
     const { target } = e;
     const inputType = target.name;
     const inputValue = target.value;
@@ -87,55 +85,83 @@ function Contact() {
     // Put a settimeout here to clear setErrorMessage
     setTimeout(() => {
       setErrorMessage('');
-    }, 3000); 
+    }, 3000);
   };
 
   return (
     <div>
-      <h1>Contact</h1>
-      <div className="contactForm">
-      <a className="emailLink" href="mailto:brian.d.wach@gmail.com">brian.d.wach@gmail.com</a>
-      <form className="form" onSubmit={handleFormSubmit}>
-        <label htmlFor="nameInput" className="d-block">Name:</label>
-        <input
-          className="d-block mb-3"
-          value={name}
-          name="name"
-          id="nameInput"
-          autoComplete="name"
-          onChange={handleInputChange}
-          onBlur={handleInputBlur}
-          type="text"
-        />
-        <label htmlFor="emailInput" className="d-block">Email Address:</label>
-        <input
-          className="d-block mb-3"
-          value={email}
-          name="email"
-          id="emailInput"
-          autoComplete="email"
-          onChange={handleInputChange}
-          onBlur={handleInputBlur}
-          type="email"
-        />
-        <label htmlFor="messageInput" className="d-block">Message:</label>
-        <textarea
-          className="mb-3 messageInput"
-          value={message}
-          name="message"
-          id="messageInput"
-          autoComplete="off"
-          onChange={handleInputChange}
-          onBlur={handleInputBlur}
-          type="text"
-        />  
-        <button type="submit" className="d-block mb-3">Submit</button>
+      <h1 className='text-3xl m-2'>Contact</h1>
+      <div className='m-[10px]'>
+        <a
+          className='text-accent desktop:hover:text-success desktop:active:text-base-content'
+          href="mailto:brian.d.wach@gmail.com">brian.d.wach@gmail.com
+        </a>
+        <form className="form-control mt-[20px]" onSubmit={handleFormSubmit}>
+
+
+          <label htmlFor="nameInput" className="input input-bordered flex items-center gap-2 w-[325px] bg-white mb-2">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 16 16"
+              fill="currentColor"
+              className="h-4 w-4 opacity-70">
+              <path
+                d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6ZM12.735 14c.618 0 1.093-.561.872-1.139a6.002 6.002 0 0 0-11.215 0c-.22.578.254 1.139.872 1.139h9.47Z" />
+            </svg>
+            <input
+              className="grow"
+              value={name}
+              name="name"
+              id="nameInput"
+              placeholder='Name'
+              onChange={handleInputChange}
+              onBlur={handleInputBlur}
+              type="text"
+            />
+          </label>
+
+          <label htmlFor="emailInput" className="input input-bordered flex items-center gap-2 w-[325px] bg-white mb-2">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 16 16"
+              fill="currentColor"
+              className="h-4 w-4 opacity-70">
+              <path
+                d="M2.5 3A1.5 1.5 0 0 0 1 4.5v.793c.026.009.051.02.076.032L7.674 8.51c.206.1.446.1.652 0l6.598-3.185A.755.755 0 0 1 15 5.293V4.5A1.5 1.5 0 0 0 13.5 3h-11Z" />
+              <path
+                d="M15 6.954 8.978 9.86a2.25 2.25 0 0 1-1.956 0L1 6.954V11.5A1.5 1.5 0 0 0 2.5 13h11a1.5 1.5 0 0 0 1.5-1.5V6.954Z" />
+            </svg>
+            <input
+              className="grow"
+              value={email}
+              name="email"
+              id="emailInput"
+              placeholder="Email"
+              onChange={handleInputChange}
+              onBlur={handleInputBlur}
+              type="email"
+            />
+          </label>
+
+          <label htmlFor="messageInput">
+          <textarea
+            className="textarea textarea-bordered textarea-lg w-[325px] min-h-[150px] bg-white mb-2"
+            value={message}
+            name="message"
+            id="messageInput"
+            placeholder="Message"
+            onChange={handleInputChange}
+            onBlur={handleInputBlur}
+            type="text"
+          />
+          </label>
+          <button type="submit" className="btn mb-3 w-fit">Submit</button>
         </form>
         {errorMessage && (
         <div className="mb-3">
           <p className="error-text">{errorMessage}</p>
         </div>)}
-        </div>
+      </div>
     </div>
   );
 }

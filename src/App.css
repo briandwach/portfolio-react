@@ -137,6 +137,7 @@ input {
         border: 10px solid #d7dce0;
     }
 
+    /* Revist this  */
       .project:active .projectName  {
         color: #9bc5ee;
     }
