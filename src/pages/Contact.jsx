@@ -114,6 +114,7 @@ function Contact() {
               name="name"
               id="nameInput"
               placeholder='Name'
+              autocomplete='name'
               onChange={handleInputChange}
               onBlur={handleInputBlur}
               type="text"
@@ -137,6 +138,7 @@ function Contact() {
               name="email"
               id="emailInput"
               placeholder="Email"
+              autocomplete='email'
               onChange={handleInputChange}
               onBlur={handleInputBlur}
               type="email"
@@ -150,6 +152,7 @@ function Contact() {
             name="message"
             id="messageInput"
             placeholder="Message"
+            autocomplete='off'
             onChange={handleInputChange}
             onBlur={handleInputBlur}
             type="text"
