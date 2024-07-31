@@ -2,7 +2,27 @@ import { useState } from 'react';
 
 import { validateEmail } from '../utils/helpers';
 
+import emailjs from '@emailjs/browser';
+
 function Contact() {
+
+  emailjs.init({
+    publicKey: 'cRl6WRHTN46Df-KXA',
+    // Do not allow headless browsers
+    blockHeadless: true,
+    blockList: {
+      // Block the suspended emails
+      list: ['foo@emailjs.com', 'bar@emailjs.com'],
+      // The variable contains the email address
+      watchVariable: 'userEmail',
+    },
+    limitRate: {
+      // Set the limit rate for the application
+      id: 'portfolio',
+      // Allow 1 request per 10s
+      throttle: 10000,
+    },
+  });
 
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -10,7 +30,7 @@ function Contact() {
   const [errorMessage, setErrorMessage] = useState('');
 
   const handleInputChange = (e) => {
-    
+
     const { target } = e;
     const inputType = target.name;
     const inputValue = target.value;
@@ -40,8 +60,13 @@ function Contact() {
     } else { setErrorMessage(''); }
   }
 
+  const clearForm = () => {
+    setName('');
+    setEmail('');
+    setMessage('');
+  }
+
   const handleFormSubmit = (e) => {
-    // Preventing the default behavior of the form submit (which is to refresh the page)
     e.preventDefault();
 
     // First we check to see if the email is not valid or if the userName is empty. If so we set an error message to be displayed on the page.
@@ -51,41 +76,29 @@ function Contact() {
       return;
     }
 
-    // Stores the user's info as an object
-    const newSignUp = {
-      name: name,
-      email: email,
-      message: message
-    }
+    setErrorMessage(`Submitting...`)
 
-    // Creates or adds user information to local storage
-    if (!localStorage.getItem('emailList')) {
-      const emailList = [];
-      emailList.push(newSignUp);
-      localStorage.setItem('emailList', JSON.stringify(emailList));
-    } else {
-      const emailList = JSON.parse(localStorage.getItem('emailList'));
-      emailList.push(newSignUp);
-      localStorage.setItem('emailList', JSON.stringify(emailList));
-    }
+    emailjs
+      .sendForm('service_gjujqwq', 'template_8kz1d47', '#contactForm')
+      .then(
+        (result) => {
+          setErrorMessage(`Thank you for your message!`);
+          clearForm();
+          setTimeout(() => {
+            setErrorMessage('');
+          }, 3000);
+        },
+        (error) => {
+          setErrorMessage(`Apologies, there was an error. Please try again in a moment.`);
+        },
+      );
 
-    // Console logs all users that have registered.
-    const emailList = JSON.parse(localStorage.getItem('emailList'));
-    for (const user of emailList) {
-      console.log(user);
-    }
-
-    setErrorMessage(`Thank you signing up and for your message!`);
 
     // If everything goes according to plan, we want to clear out the input after a successful registration.
-    setName('');
-    setEmail('');
-    setMessage('');
+
 
     // Put a settimeout here to clear setErrorMessage
-    setTimeout(() => {
-      setErrorMessage('');
-    }, 3000);
+
   };
 
   return (
@@ -96,7 +109,7 @@ function Contact() {
           className='text-accent desktop:hover:text-success desktop:active:text-base-content'
           href="mailto:brian.d.wach@gmail.com">brian.d.wach@gmail.com
         </a>
-        <form className="form-control mt-[20px]" onSubmit={handleFormSubmit}>
+        <form className="form-control mt-[20px]" id='contactForm' onSubmit={handleFormSubmit}>
 
 
           <label htmlFor="nameInput" className="input input-bordered flex items-center gap-2 w-[325px] bg-white mb-2">
@@ -114,7 +127,7 @@ function Contact() {
               name="name"
               id="nameInput"
               placeholder='Name'
-              autocomplete='name'
+              autoComplete='name'
               onChange={handleInputChange}
               onBlur={handleInputBlur}
               type="text"
@@ -138,7 +151,7 @@ function Contact() {
               name="email"
               id="emailInput"
               placeholder="Email"
-              autocomplete='email'
+              autoComplete='email'
               onChange={handleInputChange}
               onBlur={handleInputBlur}
               type="email"
@@ -146,24 +159,24 @@ function Contact() {
           </label>
 
           <label htmlFor="messageInput">
-          <textarea
-            className="textarea textarea-bordered textarea-lg w-[325px] min-h-[150px] bg-white mb-2"
-            value={message}
-            name="message"
-            id="messageInput"
-            placeholder="Message"
-            autocomplete='off'
-            onChange={handleInputChange}
-            onBlur={handleInputBlur}
-            type="text"
-          />
+            <textarea
+              className="textarea textarea-bordered textarea-lg w-[325px] min-h-[150px] bg-white mb-2"
+              value={message}
+              name="message"
+              id="messageInput"
+              placeholder="Message"
+              autoComplete='off'
+              onChange={handleInputChange}
+              onBlur={handleInputBlur}
+              type="text"
+            />
           </label>
           <button type="submit" className="btn mb-3 w-fit">Submit</button>
         </form>
         {errorMessage && (
-        <div className="mb-3">
-          <p className="error-text">{errorMessage}</p>
-        </div>)}
+          <div className="mb-3">
+            <p className="error-text">{errorMessage}</p>
+          </div>)}
       </div>
     </div>
   );
