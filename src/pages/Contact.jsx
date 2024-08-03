@@ -77,6 +77,7 @@ function Contact() {
           }, 3000);
         },
         (error) => {
+          console.log('FAILED...', error.text);
           setErrorMessage(`Apologies, there was an error. Please try again in a moment.`);
         },
       );
