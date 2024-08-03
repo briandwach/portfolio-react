@@ -6,24 +6,6 @@ import emailjs from '@emailjs/browser';
 
 function Contact() {
 
-  emailjs.init({
-    publicKey: 'cRl6WRHTN46Df-KXA',
-    // Do not allow headless browsers
-    blockHeadless: true,
-    blockList: {
-      // Block the suspended emails
-      list: ['foo@emailjs.com', 'bar@emailjs.com'],
-      // The variable contains the email address
-      watchVariable: 'userEmail',
-    },
-    limitRate: {
-      // Set the limit rate for the application
-      id: 'portfolio',
-      // Allow 1 request per 10s
-      throttle: 10000,
-    },
-  });
-
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
@@ -78,8 +60,14 @@ function Contact() {
 
     setErrorMessage(`Submitting...`)
 
+    const serviceId = process.env.EMAILJS_SERVICE_ID;
+    const templateId = process.env.EMAILJS_TEMPLATE_ID;
+    const publicKey = process.env.EMAILJS_PUBLIC_KEY;
+
     emailjs
-      .sendForm('service_gjujqwq', 'template_8kz1d47', '#contactForm')
+      .sendForm(serviceId, templateId, '#contactForm', {
+        publicKey: publicKey,
+      })
       .then(
         (result) => {
           setErrorMessage(`Thank you for your message!`);
@@ -92,13 +80,6 @@ function Contact() {
           setErrorMessage(`Apologies, there was an error. Please try again in a moment.`);
         },
       );
-
-
-    // If everything goes according to plan, we want to clear out the input after a successful registration.
-
-
-    // Put a settimeout here to clear setErrorMessage
-
   };
 
   return (
