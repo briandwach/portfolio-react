@@ -11,6 +11,28 @@ function Contact() {
   const [message, setMessage] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
 
+  const serviceId = process.env.EMAILJS_SERVICE_ID;
+  const templateId = process.env.EMAILJS_TEMPLATE_ID;
+  const publicKey = process.env.EMAILJS_PUBLIC_KEY;
+
+  emailjs.init({
+    publicKey: publicKey,
+    // Do not allow headless browsers
+    blockHeadless: true,
+    blockList: {
+      // Block the suspended emails
+      list: ['foo@emailjs.com', 'bar@emailjs.com'],
+      // The variable contains the email address
+      watchVariable: 'userEmail',
+    },
+    limitRate: {
+      // Set the limit rate for the application
+      id: 'portfolio',
+      // Allow 1 request per 10s
+      throttle: 10000,
+    },
+  });
+
   const handleInputChange = (e) => {
 
     const { target } = e;
@@ -60,14 +82,8 @@ function Contact() {
 
     setErrorMessage(`Submitting...`)
 
-    const serviceId = process.env.EMAILJS_SERVICE_ID;
-    const templateId = process.env.EMAILJS_TEMPLATE_ID;
-    const publicKey = process.env.EMAILJS_PUBLIC_KEY;
-
     emailjs
-      .sendForm(serviceId, templateId, '#contactForm', {
-        publicKey: publicKey,
-      })
+      .sendForm(serviceId, templateId, '#contactForm')
       .then(
         (result) => {
           setErrorMessage(`Thank you for your message!`);
