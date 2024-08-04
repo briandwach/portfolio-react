@@ -5,7 +5,7 @@ export default function Portfolio() {
   return (
       <div>
           <h1 className='text-3xl m-2'>Portfolio</h1>
-          <div className='desktop:flex desktop:flex-wrap desktop:w-full desktop:ml-[1%] desktop:mr-[1%]'>
+          <div className='desktop:flex desktop:flex-wrap desktop:justify-center'>
               {projectData.map((project) => (
                   <Project
                       key={project.name}

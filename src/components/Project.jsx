@@ -1,10 +1,12 @@
+import Technologies from './Technologies.jsx';
+
 function Project({ name, appUrl, githubUrl, image, alt }) {
     return (
-        <div className='relative desktop:w-[47%] m-3'>
+        <div className='relative desktop:w-[47%] max-w-[764px] m-3'>
             <a href={appUrl} target='_blank' rel='noopener noreferrer' className='z-0'>
-                <div className='relative border-[10px] border-solid border-base-content rounded-[10px] 
+                <div className='group relative border-[10px] border-solid border-base-content rounded-[10px] 
                                 desktop:hover:border-success desktop:hover:shadow-2xl'>
-                    <img src={image} alt={alt} />
+                    <img src={image} alt={alt} className='desktop:group-hover:opacity-50'/>
                     <div className='flex justify-end bg-base-100 absolute bottom-0 w-full'>
                         <h2 className='text-2xl text-nowrap text-accent m-2 mr-[50px]'>{name}</h2>
                     </div>

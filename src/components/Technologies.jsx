@@ -1,8 +1,4 @@
-import { Link } from 'react-router-dom';
-
-import Navigation from './Navigation.jsx';
-
-function Header() {
+function Technologies() {
     return (
         <div>
             <div className='m-2'>
@@ -16,4 +12,4 @@ function Header() {
     );
 }
 
-export default Header;
+export default Technologies;
