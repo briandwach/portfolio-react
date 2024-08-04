@@ -1,6 +1,6 @@
 const projectData = [
     {   
-        name: 'Inspection Tracker',
+        name: 'Checkrūm',
         appUrl: 'https://checkrum-jshn.onrender.com',
         githubUrl: 'https://github.com/briandwach/checkrum',
         image: '/images/checkrum.png',

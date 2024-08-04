@@ -22,7 +22,7 @@ This is a web development portfolio built as a single page web application using
 
 ## Usage
 
-Here is the [Deployed Application](https://briandwachportfolio.netlify.app/) hosted by [Netlify](https://www.netlify.com/).
+Here is the [Deployed Application](https://brianwach.netlify.app/) hosted by [Netlify](https://www.netlify.com/).
 
 Here is the [Code Repository](https://github.com/briandwach/portfolio-react).
 
