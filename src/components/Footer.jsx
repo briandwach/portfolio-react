@@ -9,7 +9,7 @@ function Footer() {
         <a href='https://www.linkedin.com/in/brianwach/' target='_blank' rel='noopener noreferrer'>
             <img className={logoStyles} src='/images/In-Blue-128.png' alt='LinkedIn blue In logo' />
         </a>
-        <a href='mailto:brian.d.wach@gmail.com' target='_blank' rel='noopener noreferrer'>
+        <a href='mailto:brian.d.wach@gmail.com'>
         <i className={`${logoStyles} fa-solid fa-envelope fa-3x`}></i>
         </a>
     </div>
