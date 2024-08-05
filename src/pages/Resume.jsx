@@ -12,24 +12,25 @@ export default function Resume() {
       <div className="m-[10px]">
         <h3 className='text-2xl font-bold'>Front-end Proficiencies</h3>
         <ul className='list-disc mb-8 ml-4'>
-          <li>HTML</li>
-          <li>CSS</li>
-          <li>JavaScript</li>
-          <li>jQuery</li>
-          <li>Responsive Design</li>
           <li>React</li>
+          <li>JavaScript</li>
+          <li>Responsive Design</li>
+          <li>CSS</li>
+          <li>Tailwind</li>
+          <li>HTML</li>
+          <li>jQuery</li>          
           <li>Bootstrap</li>
         </ul>
 
         <h3 className='text-2xl font-bold'>Back-end Proficiencies</h3>
         <ul className='list-disc mb-8 ml-4'>
-          <li>APIs</li>
-          <li>Node</li>
-          <li>Express</li>
-          <li>PostgreSQL, Sequelize</li>
           <li>MongoDB, Mongoose</li>
-          <li>REST</li>
+          <li>Express</li>
+          <li>Node</li>
           <li>graphQL</li>
+          <li>APIs</li>
+          <li>PostgreSQL, Sequelize</li>
+          <li>REST</li>       
         </ul>
       </div>
     </div>
