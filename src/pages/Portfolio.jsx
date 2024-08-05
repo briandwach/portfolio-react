@@ -14,6 +14,8 @@ export default function Portfolio() {
                       githubUrl={project.githubUrl}
                       image={project.image}
                       alt={project.alt}
+                      desc={project.desc}
+                      tech={project.tech}
                   />
               ))}
           </div>

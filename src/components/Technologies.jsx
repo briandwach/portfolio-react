@@ -1,13 +1,12 @@
-function Technologies() {
+function Technologies({ propStyles, desc, tech}) {
+
+    const paragraphStyles = 'text-base-100 block text-center'
+
     return (
-        <div>
-            <div className='m-2'>
-            <Link className='font-bold text-base-content desktop:hover:text-accent desktop:active:text-success inline-block' to='/'>
-            <h1 className='text-5xl w-fit'>Brian Wach</h1>
-            <h1 className='ml-[2px] w-fit'>Full Stack Web Developer</h1>
-             </Link>
-             </div>
-            <Navigation />
+        <div className={`bg-neutral rounded-[10px] p-3 shadow-2xl ${propStyles}`}>
+            <p className={`${paragraphStyles} text-xl`}>{desc}</p>
+            <br></br>
+            <p className={`${paragraphStyles} text-2xl font-bold`}>{tech}</p>
         </div>
     );
 }
