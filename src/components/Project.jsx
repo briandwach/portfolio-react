@@ -54,9 +54,9 @@ function Project({ name, appUrl, githubUrl, image, alt, desc, tech }) {
                         <div className='flex justify-between bg-base-100 absolute bottom-0 w-full'>
                             <div className='my-auto ml-4'>
                                 {showInfo ?
-                                    <i className='fa-solid fa-xmark fa-xl' onClick={(e) => toggleInfo(e)}></i>
+                                    <i className='fa-solid fa-xmark fa-2xl' onClick={(e) => toggleInfo(e)}></i>
                                     :
-                                    <i className='fa-solid fa-circle-info fa-xl' onClick={(e) => toggleInfo(e)}></i>
+                                    <i className='fa-solid fa-circle-info fa-2xl' onClick={(e) => toggleInfo(e)}></i>
                                 }
                             </div>
                             <h2 className='text-2xl text-nowrap text-accent m-2 mr-[50px]'>{name}</h2>
@@ -73,9 +73,9 @@ function Project({ name, appUrl, githubUrl, image, alt, desc, tech }) {
                         <div className='flex justify-between desktop:justify-end bg-base-100 absolute bottom-0 w-full'>
                             <div className='desktop:hidden my-auto ml-4'>
                                 {showInfo ?
-                                    <i className='fa-solid fa-xmark fa-xl' onClick={(e) => toggleInfo(e)}></i>
+                                    <i className='fa-solid fa-xmark fa-2xl' onClick={(e) => toggleInfo(e)}></i>
                                     :
-                                    <i className='fa-solid fa-circle-info fa-xl' onClick={(e) => toggleInfo(e)}></i>
+                                    <i className='fa-solid fa-circle-info fa-2xl' onClick={(e) => toggleInfo(e)}></i>
                                 }
                             </div>
                             <h2 className='text-2xl text-nowrap text-accent m-2 mr-[50px]'>{name}</h2>
