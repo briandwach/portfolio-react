@@ -3,8 +3,8 @@ function Footer() {
     const logoStyles = 'max-w-[50px] m-[10px] desktop:hover:opacity-50'
 
     return (
-        <div>
-            <div className='flex justify-center mt-[40px]'>
+        <div className='mt-[40px] mb-6'>
+            <div className='flex justify-center'>
                 <a href='https://github.com/briandwach' target='_blank' rel='noopener noreferrer'>
                     <img className={logoStyles} src='/images/github-mark.png' alt='Github Invertocat logo' />
                 </a>
