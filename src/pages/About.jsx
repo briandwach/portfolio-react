@@ -5,15 +5,15 @@ export default function About() {
       <div className='desktop:flex flex-row'>
         <img className='rounded-3xl w-3/4 h-3/4 max-w-[300px] m-2' src='/images/headshot.png' alt='Headshot of Brian Wach' />
         <div className='text-xl text-base-content m-2'>
-        <ul>
-          <li>Full Stack Web Developer</li>
-          <li>Audio Visual Technician</li>
-          <li>Musician</li>
-        </ul>
-        <br></br>
-        <p>
-          Focused on creating intuitive web applications to serve the needs of businesses and people.
-        </p>
+          <ul>
+            <li>Full Stack Web Developer</li>
+            <li>Audio Visual Technician</li>
+            <li>Musician</li>
+          </ul>
+          <br></br>
+          <p>
+            Focused on creating intuitive web applications to serve the needs of businesses and people.
+          </p>
         </div>
       </div>
     </div>
