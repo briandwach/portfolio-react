@@ -6,7 +6,7 @@ export default {
   ],
   theme: {
     screens: {
-      'desktop': '780px'
+      'desktop': '1067px'
     },
     extend: {
     },
