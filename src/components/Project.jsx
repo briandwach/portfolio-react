@@ -13,7 +13,7 @@ function Project({ name, appUrl, githubUrl, image, alt, desc, tech }) {
         const img = new Image();
         img.src = image;
         img.onload = () => {
-            setLoading(false);
+            setImgLoad(false);
         };
     }, [image]);
 
@@ -76,8 +76,8 @@ function Project({ name, appUrl, githubUrl, image, alt, desc, tech }) {
 
                     <div className='group relative border-[10px] border-solid border-base-content rounded-[10px] 
                                 desktop:hover:border-secondary desktop:hover:shadow-2xl'>
-                        {loading ?
-                            <div className='w-[764px] h-[430px] desktop:group-hover:opacity-25 desktop:group-hover:blur-[1px]'></div>
+                        {imgLoad ?
+                            <img className='w-[764px] h-[430px] bg-[#c3c8cb] desktop:group-hover:opacity-25 desktop:group-hover:blur-[1px]'/>
                             :
                             <img src={image} alt={alt} className='desktop:group-hover:opacity-25 desktop:group-hover:blur-[1px]' />
                         }
