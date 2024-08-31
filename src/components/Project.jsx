@@ -77,7 +77,7 @@ function Project({ name, appUrl, githubUrl, image, alt, desc, tech }) {
                     <div className='group relative border-[10px] border-solid border-base-content rounded-[10px] 
                                 desktop:hover:border-secondary desktop:hover:shadow-2xl'>
                         {imgLoad ?
-                            <img className='w-[764px] h-[430px] bg-[#c3c8cb] desktop:group-hover:opacity-25 desktop:group-hover:blur-[1px]'/>
+                            <img className='w-[764px] h-[430px] bg-[#c3c8cb] desktop:group-hover:opacity-25 desktop:group-hover:blur-[1px]' alt={alt}/>
                             :
                             <img src={image} alt={alt} className='desktop:group-hover:opacity-25 desktop:group-hover:blur-[1px]' />
                         }
