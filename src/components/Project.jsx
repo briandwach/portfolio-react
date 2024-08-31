@@ -13,7 +13,7 @@ function Project({ name, appUrl, githubUrl, image, alt, desc, tech }) {
         const img = new Image();
         img.src = image;
         img.onload = () => {
-            setImgLoad(false);
+            setIgLoad(false);
         };
     }, [image]);
 
@@ -50,9 +50,8 @@ function Project({ name, appUrl, githubUrl, image, alt, desc, tech }) {
     };
 
     return (
-        <div className='relative desktop:w-[47%] max-w-[764px] m-3'>
+        <div className='relative desktop:w-[47%] w-[95%] max-w-[764px] m-3'>
             <a href={appUrl} target='_blank' rel='noopener noreferrer' className='z-0'>
-
 
                 {showInfo ?
                     <div className='group relative border-[10px] border-solid border-base-content rounded-[10px] 
@@ -77,7 +76,7 @@ function Project({ name, appUrl, githubUrl, image, alt, desc, tech }) {
                     <div className='group relative border-[10px] border-solid border-base-content rounded-[10px] 
                                 desktop:hover:border-secondary desktop:hover:shadow-2xl'>
                         {imgLoad ?
-                            <img className='w-[764px] h-[430px] bg-[#c3c8cb] desktop:group-hover:opacity-25 desktop:group-hover:blur-[1px]' alt={alt}/>
+                            <img className='w-[764px] aspect-video bg-[#c3c8cb] desktop:group-hover:opacity-25 desktop:group-hover:blur-[1px]' alt={alt}/>
                             :
                             <img src={image} alt={alt} className='desktop:group-hover:opacity-25 desktop:group-hover:blur-[1px]' />
                         }
