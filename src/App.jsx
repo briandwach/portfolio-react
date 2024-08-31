@@ -11,7 +11,7 @@ function App() {
   return (
     <div className="font-jakarta">
       <Header />
-      <main className='min-h-[575px]'> 
+      <main className='min-h-[575px] mt-5 center:min-w-[580px] center:w-fit center:mx-auto'> 
         <Outlet />
       </main>
       <Footer />
