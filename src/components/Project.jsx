@@ -5,8 +5,17 @@ import { useState, useEffect } from 'react';
 
 function Project({ name, appUrl, githubUrl, image, alt, desc, tech }) {
 
+    const [imgLoad, setImgLoad] = useState(true);
     const [isDesktop, setIsDesktop] = useState(false);
     const [showInfo, setShowInfo] = useState(false);
+
+    useEffect(() => {
+        const img = new Image();
+        img.src = image;
+        img.onload = () => {
+            setLoading(false);
+        };
+    }, [image]);
 
     useEffect(() => {
         const handleResize = () => {
@@ -48,8 +57,8 @@ function Project({ name, appUrl, githubUrl, image, alt, desc, tech }) {
                 {showInfo ?
                     <div className='group relative border-[10px] border-solid border-base-content rounded-[10px] 
                                 shadow-2xl'>
-                        <img src={image} alt={alt} className='opacity-25 blur-[1px]' />                
-                        <TechMobile propStyles='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-2/3 w-11/12' desc={desc} tech={tech} />                       
+                        <img src={image} alt={alt} className='opacity-25 blur-[1px]' />
+                        <TechMobile propStyles='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-2/3 w-11/12' desc={desc} tech={tech} />
 
                         <div className='flex justify-between bg-base-100 absolute bottom-0 w-full'>
                             <div className='my-auto ml-4'>
@@ -67,7 +76,11 @@ function Project({ name, appUrl, githubUrl, image, alt, desc, tech }) {
 
                     <div className='group relative border-[10px] border-solid border-base-content rounded-[10px] 
                                 desktop:hover:border-secondary desktop:hover:shadow-2xl'>
-                        <img src={image} alt={alt} className='desktop:group-hover:opacity-25 desktop:group-hover:blur-[1px]' />
+                        {loading ?
+                            <div className='w-[764px] h-[430px] desktop:group-hover:opacity-25 desktop:group-hover:blur-[1px]'></div>
+                            :
+                            <img src={image} alt={alt} className='desktop:group-hover:opacity-25 desktop:group-hover:blur-[1px]' />
+                        }
                         <Technologies propStyles='hidden desktop:group-hover:block absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-2/3 w-10/12' desc={desc} tech={tech} />
 
                         <div className='flex justify-between desktop:justify-end bg-base-100 absolute bottom-0 w-full'>
