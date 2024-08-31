@@ -13,7 +13,7 @@ function Project({ name, appUrl, githubUrl, image, alt, desc, tech }) {
         const img = new Image();
         img.src = image;
         img.onload = () => {
-            setIgLoad(false);
+            setImgLoad(false);
         };
     }, [image]);
 
