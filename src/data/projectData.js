@@ -10,8 +10,8 @@ const projectData = [
     },
     {   
         name: 'Concert Sampler',
-        appUrl: 'https://magicaryn.github.io/ConcertSampler/',
-        githubUrl: 'https://github.com/Magicaryn/ConcertSampler',
+        appUrl: 'https://briandwach.github.io/concertsampler/',
+        githubUrl: 'https://github.com/briandwach/concertsampler',
         image: '/images/concertsampler.png',
         alt: 'Screenshot of Concert Sampler application',
         desc: 'Spotify playlist generator using concert data by locale',
