@@ -13,11 +13,11 @@ export default function Resume() {
         <h3 className='text-2xl font-bold'>Front-end Proficiencies</h3>
         <ul className='list-disc mb-8 ml-4'>
           <li>React</li>
-          <li>JavaScript</li>
+          <li>JavaScript ES6+</li>
           <li>Responsive Design</li>
           <li>CSS</li>
           <li>Tailwind</li>
-          <li>HTML</li>
+          <li>HTML5</li>
           <li>jQuery</li>          
           <li>Bootstrap</li>
         </ul>
@@ -31,6 +31,13 @@ export default function Resume() {
           <li>APIs</li>
           <li>PostgreSQL, Sequelize</li>
           <li>REST</li>       
+        </ul>
+
+        <h3 className='text-2xl font-bold'>Other</h3>
+        <ul className='list-disc mb-8 ml-4'>
+          <li>Git</li>
+          <li>Insomnia</li>
+          <li>Command Prompt</li>    
         </ul>
       </div>
     </div>
