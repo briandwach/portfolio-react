@@ -30,7 +30,7 @@ function About() {
             <li>Musician</li>
           </ul>
           <br></br>
-          <p>
+          <p className='max-w-[300px]'>
             Detail-oriented and committed to exploring all possibilities to find the best solution.
           </p>
         </div>

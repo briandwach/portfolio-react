@@ -48,7 +48,7 @@ function Project({ name, appUrl, githubUrl, image, alt, desc, tech }) {
     };
 
     return (
-        <div className='relative desktop:w-[47%] w-[95%] max-w-[764px] m-3'>
+        <div className='relative desktop:w-[47%] w-[95%] max-w-[764px] m-2'>
             <a href={appUrl} target='_blank' rel='noopener noreferrer' className='z-0'>
 
                 {showInfo ?
