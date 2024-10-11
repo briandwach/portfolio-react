@@ -45,8 +45,6 @@ function Project({ name, appUrl, githubUrl, image, alt, desc, tech }) {
         } else {
             setShowInfo(true);
         }
-
-        console.log(showInfo);
     };
 
     return (
