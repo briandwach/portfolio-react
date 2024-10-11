@@ -31,7 +31,7 @@ function About() {
           </ul>
           <br></br>
           <p>
-            Focused on creating intuitive web applications to serve the needs of businesses and people.
+            Detail-oriented and committed to exploring all possibilities to find the best solution.
           </p>
         </div>
       </div>
