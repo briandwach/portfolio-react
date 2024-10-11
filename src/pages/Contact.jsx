@@ -83,7 +83,7 @@ function Contact() {
       <h1 className='text-3xl m-2'>Contact</h1>
       <div className='m-[10px]'>
         <a
-          className='text-accent desktop:hover:text-success desktop:active:text-base-content'
+          className='text-accent desktop:hover:text-success desktop:active:text-primary'
           href="mailto:brian.d.wach@gmail.com">brian.d.wach@gmail.com
         </a>
         <form className="form-control mt-[20px]" id='contactForm' onSubmit={handleFormSubmit}>

@@ -8,9 +8,11 @@
 This is a web development portfolio built as a single page web application using React.  
 
 - This application was built with Vite in a Node.js environment.  
-- It is a single page application using the react-router-dom package to enable page history navigation.
-- Projects can be easily updated via an exported object in the data folder directory.  Screenshots of the example application should be of a 1920x1080 resolution.
-- There is no backend currently for this application so information from users that signup with their email and send a message are only stored in local storage and console logged.
+- It is a single page application using the [react-router-dom](https://www.npmjs.com/package/react-router-dom) package to enable page history navigation.
+- It utilizes [Tailwind CSS](https://tailwindcss.com/) and [Daisy UI](https://daisyui.com/) for stylings.  
+- In addition, the page uses the [vite-plugin-pwa](https://www.npmjs.com/package/vite-plugin-pwa/v/0.9.1) to register a service worker to cache static assets for better performance.
+- Projects can be easily updated via an exported object in the data folder directory.  Screenshots of the example application should have a resolution of 764x430.
+- With no back end, the contact form is functional by using [EmailJS](https://www.emailjs.com/).
 
 
 ## Table of Contents
@@ -30,11 +32,11 @@ Here is the [Code Repository](https://github.com/briandwach/portfolio-react).
 
 ![About Page](./screenshots/about.png)  
 
-- On the portfolio page, click on the project images or title to be directed to the site for the live application. Click on the Github logos to view the project repositories.
+- On the portfolio page, hover over the project images to learn about the technologies used (or click the info button on mobile).  Click anywhere on the image or title to be directed to the live application. Click on the Github logos to view the project repositories.
 
 ![Portfolio Page](./screenshots/projects.png)  
 
-- The contact page features a form to sign up for an email newsletter and send a message.  There is no backend database at this time so this info is only stored in local storage in the browser. User input is validated before the form can be successfully submitted.
+- The contact page features a form to sign up to send a message via email using [EmailJS](https://www.emailjs.com/). User input is validated before the form can be successfully submitted.
 
 ![Contact Page](./screenshots/contact.png)  
 
