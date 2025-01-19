@@ -18,6 +18,15 @@ const projectData = [
         tech: 'Spotify Web API | JamBase Concert API | JavaScript | Bootstrap | HTML | CSS'
     },
     {   
+        name: 'Just Tech News',
+        appUrl: 'https://python-newsfeed-7lbt.onrender.com/',
+        githubUrl: 'https://github.com/briandwach/python-newsfeed',
+        image: '/images/newsfeed.png',
+        alt: 'Screenshot of Just Tech News application',
+        desc: 'News feed for posting tech articles, commenting, and upvoting',
+        tech: 'Python | Flask | MySQL | SQLAlchemy | Jinja | JavaScript'
+    },
+    {   
         name: 'JavaScript Quiz',
         appUrl: 'https://briandwach.github.io/codingassessment',
         githubUrl: 'https://github.com/briandwach/codingassessment',
