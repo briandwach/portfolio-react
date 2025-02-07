@@ -24,6 +24,9 @@ export default function Resume() {
 
         <h3 className='text-2xl font-bold'>Back-end Proficiencies</h3>
         <ul className='list-disc mb-8 ml-4'>
+          <li>Python</li>
+          <li>Flask</li>
+          <li>MySQL, SQLAlchemy</li>
           <li>MongoDB, Mongoose</li>
           <li>Express</li>
           <li>Node</li>
