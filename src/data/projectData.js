@@ -24,7 +24,7 @@ const projectData = [
         image: '/images/newsfeed.png',
         alt: 'Screenshot of Just Tech News application',
         desc: 'News feed for posting tech articles, commenting, and upvoting',
-        tech: 'Python | Flask | MySQL | SQLAlchemy | Jinja | JavaScript'
+        tech: 'Python | Flask | MySQL | SQLAlchemy'
     },
     {   
         name: 'JavaScript Quiz',
