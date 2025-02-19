@@ -17,7 +17,7 @@ function Footer() {
             </div>
 
             <h4 className="text-center text-lg text-base-content mb-3">
-                &copy; Brian Wach 2024
+                &copy; Brian Wach 2025
             </h4>
 
         </div>
